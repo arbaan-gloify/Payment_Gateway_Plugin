@@ -2,11 +2,11 @@ library razorpay_plugin;
 
 import 'dart:developer';
 
-import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyRazorpayPlugin {
-  static const MethodChannel _channel = MethodChannel('my_razorpay_plugin');
 
   void openCheckout({
     required String keyId,
@@ -36,15 +36,48 @@ class MyRazorpayPlugin {
     }
   }
 
-  static void _handlePaymentSuccess(PaymentSuccessResponse response) {
-    _channel.invokeMethod('paymentSuccess', response);
+  void _handlePaymentSuccess(PaymentSuccessResponse response) {
+    log('${response.paymentId},${response.orderId},${response.signature}');
+    Fluttertoast.showToast(
+      msg: "Success",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.SNACKBAR,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.green,
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
   }
 
-  static void _handlePaymentError(PaymentFailureResponse response) {
-    _channel.invokeMethod('paymentError', response);
+  void _handlePaymentError(PaymentFailureResponse response) {
+    // _channel.invokeMethod('paymentError', response);
+    log('${response.message},${response.error},${response.code}');
+    Fluttertoast.showToast(
+      msg: "Failed",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.SNACKBAR,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.red,
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
   }
 
-  static void _handleExternalWallet(ExternalWalletResponse response) {
-    _channel.invokeMethod('externalWallet', response);
+  void _handleExternalWallet(ExternalWalletResponse response) {
+    log('${response.walletName},');
+    Fluttertoast.showToast(
+      msg: "External Walled",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.SNACKBAR,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.blue,
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
   }
+}
+
+
+class UpiPlugin{
+
 }
