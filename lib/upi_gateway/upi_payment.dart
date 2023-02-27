@@ -16,7 +16,7 @@ class _UpiPaymentGatewayState extends State<UpiPaymentGateway> {
       receiverName: "Arbaan Qureshi S",
       receiverUpiId: "9164444469@paytm",
       transactionRefId: 'TestingUpiIndiaPlugin',
-      transactionNote: 'Not actual. Just an example.',
+      transactionNote: 'Example Note.',
     );
   }
 }

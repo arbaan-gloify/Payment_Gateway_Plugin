@@ -46,6 +46,8 @@ dev_dependencies:
     path: package/razorpay_plugin
   my_upi_india_plugin:
     path: package/my_upi_india_plugin
+  firebase_analytics_plugin:
+    path: package/firebase_analytics_plugin
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
