@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "47405974637",
+    "project_id": "flutter-plugin-64a32",
+    "storage_bucket": "flutter-plugin-64a32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47405974637:android:5ed6c0d1d10b01a7162b64",
+        "android_client_info": {
+          "package_name": "com.example.my_razorpay_plugin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47405974637-b4plq1fcifkoen667kjgt04v8kuuvveh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.my_razorpay_plugin",
+            "certificate_hash": "a8c74b6a2ad5119cdddd4a5ffabaa2a949127a16"
+          }
+        },
+        {
+          "client_id": "47405974637-1i4uhrn7cjot8c2q2e3chlcbse3qg0v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO7DQYxwJwhBkao3YRQ175BN6vDvW5Yvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47405974637-1i4uhrn7cjot8c2q2e3chlcbse3qg0v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

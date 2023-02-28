@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'firebase_analytics/firebase_analyt.dart';
 import 'razorpay_gateway/razorpay.dart';
 import 'upi_gateway/upi_payment.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const UpiPaymentGateway(),
+      home: const FirebasePluginAnalytics(),
     );
   }
 }
